@@ -1,0 +1,44 @@
+---
+import Social from "../common/Social.astro";
+import { Icon } from "astro-icon/components";
+
+const name = "BOURHYM";
+const email = "hello@efeele.dev";
+const github = "https://github.com/EFEELE";
+const linkedin = "https://www.linkedin.com/in/efeele/";
+
+---
+
+<footer
+  class="relative bottom-0 w-full px-4 py-8 font-medium text-gray-800 dark:text-zinc-300 border-t border-gray-200 dark:border-zinc-800 transition-colors duration-300"
+  role="contentinfo"
+  aria-label="Site footer"
+>
+  <nav
+    class="mx-auto flex max-w-7xl flex-row items-center justify-between gap-4 text-xl max-xl:px-6 max-sm:flex-col"
+    aria-label="Footer navigation"
+  >
+    <div
+      class="relative h-6 cursor-pointer before:absolute before:left-1/2 before:top-1/2 before:h-full before:w-[40%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-orange-500/20 before:blur-3xl before:opacity-80 before:-z-1 hover:text-orange-500 transition-all dark:[text-shadow:_0_1px_2px_#000]"
+    >
+      <a href="/" aria-label="Return to homepage">
+        <!-- This icon represents the logo -->
+        <Icon name="code" aria-hidden="true" />
+      </a>
+    </div>
+    <div class="text-center">
+      <a
+        href="https://github.com/EFEELE"
+        class="flex items-center justify-center gap-3 text-base font-normal italic max-sm:text-sm"
+        aria-label="About the website development"
+        ><Icon name="code" aria-hidden="true" /> Developed by <strong>BOURHYM</strong>, with Astro</a
+      >
+    </div>
+    <div class="flex items-center justify-center gap-5" role="list" aria-label="Social media links">
+      <Social link={email} iconName="envelope" />
+      
+      <Social link={github} iconName="github"  />
+      <Social link={linkedin} iconName="linkedin"  />
+    </div>
+  </nav>
+</footer>

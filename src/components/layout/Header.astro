@@ -1,0 +1,77 @@
+---
+import Navigation from "./Navigation.astro";
+import ThemeIcon from "./ThemeIcon.astro";
+import Social from "../common/Social.astro";
+import { Icon } from "astro-icon/components";
+
+const currentPath = Astro.url.pathname;
+const routes = ["/", "/portfolio", "/about-me", ]; 
+
+const github = "https://github.com/EFEELE";
+const linkedin = "https://www.linkedin.com/in/efeele/";
+const resumeUrl = "/resume/resume.pdf"; // Path to your resume PDF
+
+// Check if the current route is in the list of routes
+const isActiveRoute = routes.includes(currentPath);
+
+const navItems = isActiveRoute 
+  ? ["experience", "projects", "certifications", "blog"]
+  : ["home"]; // Change the items
+---
+
+<header
+  role="banner"
+  aria-label="Main navigation"
+  class="sticky top-0 z-50 w-full p-4 font-medium text-gray-800 dark:text-neutral-200 backdrop-blur-md  transition-colors duration-300"
+>
+  <div
+    class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
+  >
+    <a href="/" aria-label="Go to home">
+      <Icon
+        name="logo"
+        class="h-6 cursor-pointer transition-all hover:text-orange-500 dark:hover:text-orange-600"
+        aria-hidden="true"
+      />
+    </a>
+
+    <Navigation items={navItems} />
+
+    <div class="flex items-center justify-between gap-5 text-xl">
+      <div class="max-md:hidden flex items-center justify-center gap-5" role="list">
+        <Social link={github} iconName="github" />
+        <Social
+          link={linkedin}
+          iconName="linkedin"
+        />
+      </div>
+    </div>
+    <div class="flex items-center gap-5 text-xl md:pl-5">
+      <a 
+        href={resumeUrl} 
+        target="_blank" 
+        aria-label="View Resume" 
+        class="transition-all hover:text-orange-500 dark:hover:text-orange-600"
+        id="resume-link"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+      </a>
+      <ThemeIcon />
+      <button 
+        class="hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <Icon name="bars" class="hamburger-icon bars-icon" aria-hidden="true" />
+        <Icon name="xmark" class="hamburger-icon xmark-icon" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+</header>

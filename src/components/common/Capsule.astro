@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+import { getLanguage } from "../../utils/languages";
+
+interface Props {
+  lang: string;
+  size?: "xs" | "md";
+  linkEnabled?: boolean;
+}
+
+const { size = "md", lang, linkEnabled = true } = Astro.props as Props;
+
+const sizeClasses = {
+  xs: "size-5",
+  md: "size-7",
+};
+
+const selectedLanguage = getLanguage(lang);
+
+const getContainerClasses = () => {
+  const textSize = selectedLanguage.name.length > 10 ? "text-sm" : "text-base";
+  return `capsule-container ${textSize}`;
+};
+
+const getIconContainerClasses = () => {
+  return `capsule-icon ${sizeClasses[size]} max-lg:size-6 max-sm:size-5 ${
+    selectedLanguage.className ? selectedLanguage.className : ""
+  }  dark:group-hover:bg-black transition-colors duration-300`;
+};
+---
+
+{
+  linkEnabled ? (
+    <a
+      class="cursor-pointer group"
+      href={`/blog/techs/${lang}`}
+      aria-label={`View articles about ${selectedLanguage.name}`}
+      role="link"
+    >
+      <span
+        class={getContainerClasses()}
+        role="presentation"
+        aria-hidden="true"
+      >
+        <div
+          class={getIconContainerClasses()}
+          role="img"
+          aria-label={`${selectedLanguage.name} icon`}
+        >
+          <Icon class="!w-full" name={selectedLanguage.iconName} />
+        </div>
+        {selectedLanguage.name}
+      </span>
+    </a>
+  ) : (
+    <span
+      class={`${getContainerClasses()} cursor-default group`}
+      role="presentation"
+      aria-hidden="true"
+    >
+      <div
+        class={getIconContainerClasses()}
+        role="img"
+        aria-label={`${selectedLanguage.name} icon`}
+      >
+        <Icon class="!w-full" name={selectedLanguage.iconName} />
+      </div>
+      {selectedLanguage.name}
+    </span>
+  )
+}

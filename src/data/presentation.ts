@@ -4,6 +4,9 @@ type Social = {
 };
 
 type Presentation = {
+  avatar:string,
+  name:string,
+  role:string,
   mail: string;
   title: string;
   description: string;
@@ -12,11 +15,14 @@ type Presentation = {
 };
 
 const presentation: Presentation = {
-  mail: "maxencewolff.pro@gmail.com",
-  title: "Hi, I’m Maxence 👋",
-  // profile: "/profile.webp",
+  avatar:"/images/me2.jpeg",
+  role:"Software Engineer",
+  name:"joe doe",
+  mail: "simobourhym01@gmail.com",
+  title: "Hi, I’m Mohammed 👋",
+  profile: "/images/me.jpeg",
   description:
-    "Bonjour, i'm a *french frontend developer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I complete my pokemon card collection and learning TypeScript.",
+    "Hey, i'm a *Software Engineer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I complete my pokemon card collection and learning TypeScript.",
   socials: [
     {
       label: "X",

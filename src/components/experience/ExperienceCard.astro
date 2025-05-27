@@ -1,0 +1,30 @@
+---
+// components/ExperienceCard.astro
+import type { Experience } from "@/data/experiences"
+
+const { role, company, location, date, period, description, companyLink, techStack } = Astro.props
+---
+
+<article class="flex flex-col gap-3 p-6 border border-neutral-800 rounded-xl  dark:bg-neutral-950  transition-all duration-300 hover:-translate-y-2 hover:border-orange-600 hover:shadow-lg">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-2 ">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-neutral-100">{role}</h3>
+    <p class="text-sm bg-gray-200 dark:bg-neutral-800 px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">
+    {date}
+    </p>
+    
+  </div>
+    <a href={companyLink} target="_blank" rel="noopener noreferrer" class="text-gray-700 dark:text-neutral-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300 font-medium">{company}</a>
+  
+
+  <p class="text-sm text-gray-600 dark:text-neutral-400 leading-6">{description}</p>
+
+  <div class="flex flex-wrap gap-2 mt-2">
+    {techStack.map((tech: string) => (
+      <span class="px-3 py-1 text-xs text-gray-700 dark:text-neutral-200 bg-gray-200 dark:bg-neutral-800 rounded-full transition-colors duration-300 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600">{tech}</span>
+    ))}
+  </div>
+</article>
+
+
+
+

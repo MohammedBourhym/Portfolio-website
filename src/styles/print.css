@@ -1,0 +1,43 @@
+/* Print styles for resume */
+@media print {
+  /* Hide elements that shouldn't be printed */
+  header, 
+  footer,
+  nav,
+  .hamburger,
+  section:not(#home),
+  article:not(#home) {
+    display: none !important;
+  }
+  
+  /* Format the main content for printing */
+  body {
+    margin: 0;
+    padding: 0 !important;
+    min-height: auto;
+  }
+  
+  #home {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+  
+  /* Ensure text is black for better printing */
+  * {
+    color: black !important;
+    background: white !important;
+  }
+  
+  /* Remove hover states */
+  a:hover {
+    text-decoration: none !important;
+  }
+  
+  /* Hide the print instructions */
+  .print-instructions {
+    display: none !important;
+  }
+}

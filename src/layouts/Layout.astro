@@ -1,12 +1,13 @@
 ---
-import Header from "../components/Header.astro";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
 import BlurCircle from "@/components/shared/BlurCircle.astro";
 import theme from "@/data/theme";
 import SEOTags from "@/components/seo/SEOTags.astro";
 import type { HeadTags } from "@/utils/types/HeadTags";
 
-import "@/styles/tailwind.css";
-import "@/styles/post.css";
+import "@/styles/global.css";
+import "@/styles/print.css";
 
 export type Props = HeadTags;
 
@@ -17,11 +18,80 @@ const headTags = Astro.props;
 <html lang="en">
   <SEOTags {...headTags} />
   <body
-    class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16"
+    class="mx-auto flex min-h-screen max-w-[972px] flex-col gap-9 bg-white dark:bg-neutral-950 px-10 py-8 text-sm text-neutral-700 dark:text-neutral-400 md:gap-20 md:py-16 transition-colors duration-300"
   >
     <Header />
     <BlurCircle position="top" color={theme.colors.blur.top} />
     <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
     <slot />
+  <Footer/>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+  <script src="/src/scripts/script.js"></script>
+  <script src="/src/scripts/resume.js"></script>
+  
+  <style is:global>
+    /* Mobile Navigation Styles */
+    @media (max-width: 767px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        border-bottom: 1px solid #eaeaea;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        z-index: 40;
+        padding: 1rem 0;
+      }
+
+      .dark .nav-links {
+        background-color: #0c0c0c;
+        border-bottom: 1px solid #333;
+      }
+
+      .nav-links.expanded {
+        display: flex;
+      }
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .hamburger {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 50;
+        border: none;
+        background: transparent;
+      }
+
+      .hamburger-icon {
+        transition: all 0.3s ease;
+      }
+
+      .bars-icon {
+        display: block;
+      }
+
+      .xmark-icon {
+        display: none;
+      }
+
+      .hamburger.active .bars-icon {
+        display: none;
+      }
+
+      .hamburger.active .xmark-icon {
+        display: block;
+      }
+    }
+  </style>
   </body>
+
 </html>

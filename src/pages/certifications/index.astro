@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import certifications from "@/data/certifications";
+import type { Certification } from "@/data/certifications";
+import CertificationCard from "@/components/certifications/CertificationCard.astro";
+
+---
+
+<Layout title="All Certifications">
+  <main class="flex flex-col gap-20">
+    <h1 class="text-2xl text-gray-900 dark:text-neutral-100">Certifications</h1>
+
+    <section class="flex flex-col gap-8">
+      <div class="flex flex-col gap-4 md:grid md:grid-cols-2">
+        {
+          certifications.map((cert: Certification) => (
+            <CertificationCard {...cert} />
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
