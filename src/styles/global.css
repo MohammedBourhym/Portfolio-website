@@ -290,3 +290,16 @@ body {
 .mobile-menu.hidden {
   transform: translateX(-100%);
 }
+
+/* Hyperdoc Bento Grid Styles */
+.bento-grid-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
