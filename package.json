@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "astro build"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",

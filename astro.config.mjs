@@ -14,8 +14,6 @@ export default defineConfig({
     }),
   ],
   site: SITE_URL,
-  // Remove base if using custom domain
-  // base: '/Portfolio',
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {
