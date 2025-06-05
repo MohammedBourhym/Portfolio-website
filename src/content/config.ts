@@ -11,4 +11,15 @@ const postsCollection = defineCollection({
   }),
 });
 
-export const collections = { posts: postsCollection };
+const hyperdocCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+  }),
+});
+
+export const collections = {
+  posts: postsCollection,
+  hyperdoc: hyperdocCollection,
+};

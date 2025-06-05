@@ -9,7 +9,7 @@ import Tools from "@/components/common/Tools.astro";
 // Social links
 const email = "simobourhym01@gmail.com";
 const github = "https://github.com/MoBourhym";
-const linkedin = "https://www.linkedin.com/in/bourhym/";
+const linkedin = "https://www.linkedin.com/in/mohammed-bourhym-733b91274";
 const resumeUrl = "/resume/resume.pdf";
 const coverLetterUrl = "/resume/cover-letter.pdf";
 
@@ -29,10 +29,10 @@ const currentYear = new Date().getFullYear();
           <div class="relative">
             <Image
               src={presentation.profile || "/images/me.jpeg"}
-              width={120}
-              height={120}
+              width={300}
+              height={300}
               alt={`${presentation.name || "Developer"}'s profile picture`}
-              class="rounded-full border-2 border-orange-500/50"
+              class="w-full aspect-square object-cover rounded-lg border-2 border-orange-500/50"
             />
             <div class="absolute -bottom-2 -right-2 bg-white dark:bg-neutral-900 p-1 rounded-full border border-gray-200 dark:border-neutral-800">
               <Icon name="code" class="w-5 h-5 text-orange-500" />
@@ -45,8 +45,7 @@ const currentYear = new Date().getFullYear();
           </div>
           
           <p class="text-gray-700 dark:text-gray-400 text-sm text-center md:text-left">
-            {presentation.description?.replace(/\*([^*]+)\*/g, '$1') || 
-              "Software Engineer with experience in web development. Currently working with NextJS and TypeScript."}
+            Motivated software engineering student with a strong curiosity for the IT field, currently seeking a summer internship to apply, expand, and refine my skills in DevOps and software engineering. Eager to contribute to real-world projects while continuing to grow as a developer and IT enthusiast.
           </p>
           
           <div class="flex items-center justify-center md:justify-start gap-4 text-xl">
@@ -55,11 +54,6 @@ const currentYear = new Date().getFullYear();
             <Social link={linkedin} iconName="linkedin" />
           </div>
         </div>
-        
-        <div class="p-6 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-orange-500/5 to-violet-500/5 shadow-lg hover:shadow-xl transition-all duration-300">
-          <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Tech Stack</h2>
-          <Tools variant="center" size="xs" linkEnabled={false} />
-        </div>
       </div>
       
       <!-- Bento Grid (Right Columns) -->
@@ -67,124 +61,134 @@ const currentYear = new Date().getFullYear();
         <div class="grid grid-cols-1 sm:grid-cols-6 auto-rows-[100px] gap-4">
           <!-- Resume - Large Card -->
           <a href={resumeUrl} target="_blank" rel="noopener noreferrer" 
-             class="col-span-1 sm:col-span-3 row-span-2 p-6 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             class="col-span-1 sm:col-span-3 row-span-2 p-6 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-between items-start">
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Resume</h3>
-              <Icon name="git" class="w-8 h-8 text-orange-500" />
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">ATS Resume</h3>
+              <Icon name="git" class="w-8 h-8 text-orange-500 group-hover:rotate-12 transition-transform duration-300" />
             </div>
-            <p class="text-gray-600 dark:text-gray-400 mt-2">Download my professional resume</p>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">Download my ATS-optimized resume</p>
             <div class="flex justify-end mt-auto">
-              <Icon name="git" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-full">PDF</span>
+            </div>
+          </a>
+          
+          <!-- Human Friendly Resume -->
+          <a href="/resume/Human Freindly Resume.pdf" target="_blank" rel="noopener noreferrer"
+             class="col-span-1 sm:col-span-3 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div class="flex justify-between items-start">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Human Friendly Resume</h3>
+              <Icon name="person" class="w-6 h-6 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 text-xs mt-1">Download my human-readable resume with visual design</p>
+            <div class="flex justify-end mt-auto">
+              <span class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">PDF</span>
             </div>
           </a>
           
           <!-- Cover Letter -->
           <a href={coverLetterUrl} target="_blank" rel="noopener noreferrer"
-             class="col-span-1 sm:col-span-3 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-red-500/10 to-pink-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             class="col-span-1 sm:col-span-2 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-red-500/10 to-pink-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-between items-start">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Cover Letter</h3>
-              <Icon name="markdown" class="w-6 h-6 text-red-500" />
+              <Icon name="envelope" class="w-6 h-6 text-red-500 group-hover:rotate-12 transition-transform duration-300" />
             </div>
             <div class="flex justify-end mt-auto">
-              <Icon name="git" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-full">PDF</span>
             </div>
           </a>
           
           <!-- Portfolio -->
           <a href="/" 
-             class="col-span-1 sm:col-span-2 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-purple-500/10 to-indigo-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            <div class="flex justify-between items-start">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Portfolio</h3>
-              <Icon name="dashboard" class="w-6 h-6 text-purple-500" />
-            </div>
-            <div class="flex justify-end mt-auto">
-              <Icon name="arrow-left" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-purple-500/10 to-indigo-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div class="flex justify-center items-center h-full">
+              <Icon name="dashboard" class="w-8 h-8 text-purple-500 group-hover:scale-110 transition-transform duration-300" />
             </div>
           </a>
           
           <!-- GitHub - Small Card -->
           <a href={github} target="_blank" rel="noopener noreferrer"
-             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-gray-500/10 to-gray-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-gray-500/10 to-gray-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-center items-center h-full">
-              <Icon name="github" class="w-8 h-8 text-gray-800 dark:text-gray-200" />
+              <Icon name="github" class="w-8 h-8 text-gray-800 dark:text-gray-200 group-hover:rotate-12 transition-transform duration-300" />
             </div>
           </a>
           
           <!-- LinkedIn - Small Card -->
           <a href={linkedin} target="_blank" rel="noopener noreferrer"
-             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-center items-center h-full">
-              <Icon name="linkedin" class="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <Icon name="linkedin" class="w-8 h-8 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" />
             </div>
           </a>
           
           <!-- Hidden Job Market Mind Map - Medium Card -->
           <a href="https://mymap.ai/share/what-is-the-hidden-job-market-bDytmyzwdAfab" target="_blank" rel="noopener noreferrer"
-             class="col-span-1 sm:col-span-2 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             class="col-span-1 sm:col-span-2 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
             <div class="flex justify-between items-start">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mind Map</h3>
-              <Icon name="markdown" class="w-6 h-6 text-green-500" />
+              <Icon name="code" class="w-6 h-6 text-green-500 group-hover:rotate-12 transition-transform duration-300 flex-shrink-0" />
             </div>
             <p class="text-gray-600 dark:text-gray-400 text-xs mt-1">Explore the concept of the hidden job market and how to access it.</p>
             <div class="flex justify-end mt-auto">
-              <Icon name="git" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">External</span>
             </div>
           </a>
           
           <!-- Projects -->
-          <a href="/#projects" 
-             class="col-span-1 sm:col-span-2 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-yellow-500/10 to-amber-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <a href="/projects" 
+             class="col-span-1 sm:col-span-2 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-yellow-500/10 to-amber-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-between items-start">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Projects</h3>
-              <Icon name="rocket" class="w-6 h-6 text-yellow-600" />
+              <Icon name="rocket" class="w-6 h-6 text-yellow-600 group-hover:translate-y-[-2px] transition-transform duration-300" />
             </div>
             <div class="flex justify-end mt-auto">
-              <Icon name="arrow-left" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-full">→</span>
             </div>
           </a>
           
-          <!-- Experience -->
-          <a href="/#experience" 
-             class="col-span-1 sm:col-span-3 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <!-- Hidden Job Market Commentary -->
+          <a href="/hidden-job-market-commentary" 
+             class="col-span-1 sm:col-span-3 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
             <div class="flex justify-between items-start">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Experience</h3>
-              <Icon name="briefcase" class="w-6 h-6 text-cyan-500" />
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Commentary</h3>
+              <Icon name="code" class="w-6 h-6 text-cyan-500 group-hover:rotate-12 transition-transform duration-300 flex-shrink-0" />
             </div>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Analysis of Indeed's article on accessing the hidden job market</p>
             <div class="flex justify-end mt-auto">
-              <Icon name="arrow-left" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 rounded-full">→</span>
             </div>
           </a>
           
           <!-- Certifications -->
-          <a href="/#certifications" 
-             class="col-span-1 sm:col-span-3 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-amber-500/10 to-yellow-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <a href="/certifications" 
+             class="col-span-1 sm:col-span-3 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-amber-500/10 to-yellow-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-between items-start">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Certifications</h3>
-              <Icon name="git" class="w-6 h-6 text-amber-500" />
+              <Icon name="briefcase" class="w-6 h-6 text-amber-500 group-hover:scale-110 transition-transform duration-300" />
             </div>
             <div class="flex justify-end mt-auto">
-              <Icon name="arrow-left" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full">→</span>
             </div>
           </a>
           
           <!-- Email - Small Card -->
           <a href={`mailto:${email}`}
-             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-orange-500/10 to-red-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+             class="col-span-1 sm:col-span-1 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-orange-500/10 to-red-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-center items-center h-full">
-              <Icon name="envelope" class="w-8 h-8 text-orange-500" />
+              <Icon name="envelope" class="w-8 h-8 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
             </div>
           </a>
           
-          <!-- Extracurricular Activities -->
-          <a href="#activities" 
-             class="col-span-1 sm:col-span-5 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-violet-500/10 to-purple-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <!-- GEIW Journey -->
+          <a href="/geiw-journey" 
+             class="col-span-1 sm:col-span-5 row-span-1 p-4 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-violet-500/10 to-purple-500/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
             <div class="flex justify-between items-start">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Extracurricular Activities</h3>
-              <Icon name="person" class="w-6 h-6 text-violet-500" />
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">GEIW Journey</h3>
+              <Icon name="person" class="w-6 h-6 text-violet-500 group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Leadership roles, volunteer work, and community involvement</p>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">My journey and experiences at GEIW (Génie Informatique et Web)</p>
             <div class="flex justify-end mt-auto">
-              <Icon name="arrow-left" class="w-5 h-5 text-gray-500 dark:text-gray-400" />
+              <span class="text-xs px-2 py-1 bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 rounded-full">→</span>
             </div>
           </a>
         </div>
@@ -199,15 +203,100 @@ const currentYear = new Date().getFullYear();
 </Layout>
 
 <style>
-  /* Add some animation for hover effects */
+  /* Enhanced hover effects with better easing */
   a {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid;
+    overflow: hidden; /* Ensure icons don't overflow */
   }
   
-  /* Ensure responsive grid adapts well on smaller screens */
+  a:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Dark mode shadow enhancements */
+  :global(.dark) a:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Icon container fixes */
+  .flex.justify-between.items-start {
+    gap: 0.5rem;
+  }
+  
+  /* Prevent icon overflow */
+  .w-6, .w-8 {
+    flex-shrink: 0;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+  }
+  
+  .w-8 {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+  
+  /* Profile card special effects */
+  .md\\:col-span-1 > div {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 94, 0, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  }
+  
+  /* Improved responsive grid */
   @media (max-width: 640px) {
     .auto-rows-[100px] {
-      grid-auto-rows: minmax(80px, auto);
+      grid-auto-rows: minmax(100px, auto);
     }
+    
+    /* Better mobile spacing */
+    a {
+      padding: 1.25rem;
+    }
+    
+    /* Adjust text sizes for mobile */
+    h3 {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    
+    p {
+      font-size: 0.8rem;
+      line-height: 1.3;
+    }
+  }
+  
+  /* Card content alignment improvements */
+  .flex.flex-col.justify-between {
+    min-height: 100%;
+  }
+  
+  /* Enhanced icon animations */
+  .group:hover .w-8,
+  .group:hover .w-6 {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  }
+  
+  /* Gradient border effect on hover */
+  a:hover {
+    border-color: transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, rgba(255, 94, 0, 0.3), rgba(139, 92, 246, 0.3)) border-box;
+  }
+  
+  :global(.dark) a:hover {
+    background: linear-gradient(rgb(12, 12, 12), rgb(12, 12, 12)) padding-box,
+                linear-gradient(135deg, rgba(255, 94, 0, 0.3), rgba(139, 92, 246, 0.3)) border-box;
+  }
+  
+  /* Status badges */
+  .text-xs.px-2 {
+    font-weight: 500;
+    letter-spacing: 0.025em;
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  * {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 </style>
