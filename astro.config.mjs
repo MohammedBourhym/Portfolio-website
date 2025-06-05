@@ -13,7 +13,7 @@ export default defineConfig({
       sitemap: `${SITE_URL}/sitemap.xml`,
     }),
   ],
-  site: SITE_URL,
+  site: "https://bourhym.me",
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {
