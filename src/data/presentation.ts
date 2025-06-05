@@ -17,24 +17,20 @@ type Presentation = {
 const presentation: Presentation = {
   avatar:"/images/me2.jpeg",
   role:"Software Engineer",
-  name:"BOURHYM",
+  name:"Mohammed BOURHYM",
   mail: "simobourhym01@gmail.com",
-  title: "Hi, I'm BOURHYM 👋",
+  title: "Hi, I'm Mohammed BOURHYM 👋",
   profile: "/images/me.jpeg",
   description:
-    "Hey, i'm a *Software Engineer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I love learning new technologies and building useful applications.",
+    "Motivated software engineering student with a strong curiosity for the IT field, currently seeking a summer internship to apply, expand, and refine my skills in DevOps and software engineering. Eager to contribute to real-world projects while continuing to grow as a developer and IT enthusiast.",
   socials: [
     {
-      label: "X",
-      link: "https://twitter.com/yourusername", // Replace with your actual Twitter username
-    },
-    {
       label: "Github",
-      link: "https://github.com/yourusername", // Replace with your actual GitHub username
+      link: "https://github.com/MoBourhym", // Replace with your actual GitHub username
     },
     {
       label: "LinkedIn",
-      link: "https://linkedin.com/in/yourusername", // Replace with your actual LinkedIn username
+      link: "https://linkedin.com/in/mohammed-bourhym-733b91274/", // Replace with your actual LinkedIn username
     },
   ],
 };

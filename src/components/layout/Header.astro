@@ -7,8 +7,8 @@ import { Icon } from "astro-icon/components";
 const currentPath = Astro.url.pathname;
 const routes = ["/", "/portfolio", "/about-me", ]; 
 
-const github = "https://github.com/bourhym";
-const linkedin = "https://www.linkedin.com/in/bourhym/";
+const github = "https://github.com/MoBourhym";
+const linkedin = "https://www.linkedin.com/in/mohammed-bourhym-733b91274/";
 const resumeUrl = "/resume/resume.pdf"; // Path to your resume PDF
 
 // Check if the current route is in the list of routes
@@ -28,11 +28,12 @@ const navItems = isActiveRoute
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
     <a href="/" aria-label="Go to home">
-      <Icon
-        name="logo"
-        class="h-6 cursor-pointer transition-all hover:text-orange-500 dark:hover:text-orange-600"
+      <span
+        class="text-xl font-bold cursor-pointer transition-all hover:text-orange-500 dark:hover:text-orange-600"
         aria-hidden="true"
-      />
+      >
+        BOURHYM
+      </span>
     </a>
 
     <Navigation items={navItems} />
