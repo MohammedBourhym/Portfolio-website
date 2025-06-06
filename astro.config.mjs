@@ -7,20 +7,6 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://bourhym.me",
-  output: "static",
-  build: {
-    inlineStylesheets: "never",
-    rollupOptions: {
-      external: ["fsevents"],
-    },
-  },
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ["fsevents"],
-      },
-    },
-  },
   integrations: [
     icon(),
     tailwind(),
