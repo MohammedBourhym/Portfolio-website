@@ -33,7 +33,7 @@ const experiences: Experience[] = [
       ],
     },
     {
-      role: "Frontend Developer",
+      role: "Web Developer",
       company: "CreativeSoft",
       companyLink: "https://creativesoft.dev",
       location: "Paris, France",

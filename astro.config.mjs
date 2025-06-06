@@ -6,14 +6,14 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://bourhym.me",
   integrations: [
     icon(),
     tailwind(),
     robotsTxt({
-      sitemap: `${SITE_URL}/sitemap.xml`,
+      sitemap: ["https://bourhym.me/sitemap.xml"],
     }),
   ],
-  site: "https://bourhym.me",
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {

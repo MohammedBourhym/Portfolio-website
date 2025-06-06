@@ -76,7 +76,19 @@ const posts = (await getCollection("posts"))
   </div>
 </article>
 
-  <p class="text-sm text-gray-500 dark:text-neutral-500 mt-2 italic print-instructions m-auto">Press Ctrl+P to print resume</p>
+  <p class="text-sm text-gray-500 dark:text-neutral-500 mt-2 italic print-instructions m-auto">Press Ctrl+P to open resume</p>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('keydown', function(e) {
+      // Check for Ctrl+P (or Cmd+P on Mac)
+      if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+        e.preventDefault(); // Prevent default browser print
+        window.open('/resume/resume.pdf', '_blank');
+      }
+    });
+  });
+</script>
 
 <!-- Blog Section -->
     <article class="flex flex-col gap-8">

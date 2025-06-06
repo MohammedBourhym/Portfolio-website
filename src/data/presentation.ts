@@ -17,12 +17,12 @@ type Presentation = {
 const presentation: Presentation = {
   avatar:"/images/me2.jpeg",
   role:"Software Engineer",
-  name:"Mohammed BOURHYM",
+  name:"Mohammed Bourhym",
   mail: "simobourhym01@gmail.com",
-  title: "Hi, I'm Mohammed BOURHYM 👋",
+  title: "Mohammed Bourhym | Software Engineer & DevOps Enthusiast",
   profile: "/images/me.jpeg",
   description:
-    "Motivated software engineering student with a strong curiosity for the IT field, currently seeking a summer internship to apply, expand, and refine my skills in DevOps and software engineering. Eager to contribute to real-world projects while continuing to grow as a developer and IT enthusiast.",
+    "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure. Available for internships and collaboration.",
   socials: [
     {
       label: "Github",
