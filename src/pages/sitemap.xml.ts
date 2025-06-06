@@ -8,17 +8,28 @@ export async function GET() {
     (post) => post.data.isPublish && !post.data.isDraft
   );
 
+  // Static pages
+  const staticPages = [
+    "",
+    "/posts/",
+    "/projects/",
+    "/certifications/",
+    "/hyperdoc/",
+    "/geiw-journey/",
+    "/hidden-job-market-commentary/",
+  ];
+
   const result = `  
   <?xml version="1.0" encoding="UTF-8"?>  
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">  
-    <url><loc>${siteUrl}/</loc></url>  
-    <url><loc>${siteUrl}/posts/</loc></url>  
-
+    ${staticPages
+      .map((page) => `<url><loc>${siteUrl}${page}</loc></url>`)
+      .join("\n")}
    
     ${isPublishedPost
       .map((post) => {
         const lastMod = post.data.publishedAt.toISOString();
-        return `<url><loc>${siteUrl}${post.slug}/</loc><lastmod>${lastMod}</lastmod></url>`;
+        return `<url><loc>${siteUrl}/posts/${post.slug}/</loc><lastmod>${lastMod}</lastmod></url>`;
       })
       .join("\n")}  
   </urlset>  
