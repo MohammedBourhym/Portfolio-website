@@ -28,9 +28,12 @@ const {
     
     <!-- SEO Meta Tags -->
     <meta name="author" content="Mohammed Bourhym" />
-    <meta name="keywords" content="Mohammed Bourhym, Bourhym, Software Engineer, DevOps, Web Developer, Portfolio, GEIW, Morocco Developer, JavaScript, TypeScript, React, Node.js" />
-    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Mohammed Bourhym, Bourhym, Software Engineer, DevOps Engineer, Web Developer, Portfolio, GEIW, Morocco Developer, Moroccan Developer, JavaScript, TypeScript, React, Node.js, Astro, Tailwind CSS, Full Stack Developer, Frontend Developer, Backend Developer, Cloud Computing, AWS, Docker, Kubernetes, CI/CD, Git, GitHub, LinkedIn" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="English" />
+    <meta name="geo.region" content="MA" />
+    <meta name="geo.country" content="Morocco" />
+    <meta name="geo.placename" content="Morocco" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -38,7 +41,11 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://bourhym.me/images/me.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mohammed Bourhym - Software Engineer & DevOps Enthusiast" />
     <meta property="og:site_name" content="Mohammed Bourhym Portfolio" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -46,10 +53,55 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="https://bourhym.me/images/me.jpeg" />
+    <meta property="twitter:image:alt" content="Mohammed Bourhym - Software Engineer Portfolio" />
+    <meta property="twitter:creator" content="@bourhym" />
+    <meta property="twitter:site" content="@bourhym" />
     
     <!-- Additional SEO -->
     <link rel="canonical" href="https://bourhym.me" />
     <meta name="theme-color" content="#f97316" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohammed Bourhym",
+        "alternateName": ["Bourhym", "Mohammed", "Mo Bourhym"],
+        "jobTitle": "Software Engineer",
+        "description": "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure.",
+        "url": "https://bourhym.me",
+        "image": "https://bourhym.me/images/me.jpeg",
+        "sameAs": [
+          "https://github.com/MoBourhym",
+          "https://www.linkedin.com/in/mohammed-bourhym-733b91274/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Morocco"
+        },
+        "email": "simobourhym01@gmail.com",
+        "knowsAbout": [
+          "Software Engineering",
+          "DevOps",
+          "Web Development",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Astro",
+          "Tailwind CSS",
+          "Cloud Computing",
+          "Docker",
+          "Kubernetes",
+          "CI/CD"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "GEIW"
+        }
+      }
+    </script>
     
     <title>{title}</title>
   </head>
