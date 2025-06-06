@@ -1,8 +1,7 @@
 ---
 title: "GEIW Journey"
-description: "My journey and experiences at GEIW (Génie Informatique et Web)"
+description: "My journey and experiences at GEIW (Global Entrepreneurship and Innovation Week)"
 ---
-
 ![ENSET Challenge 2025 Banner](/images/GEIW.jpeg)
 
 # ENSET Challenge 2025: Driving Innovation and Cybersecurity Excellence
