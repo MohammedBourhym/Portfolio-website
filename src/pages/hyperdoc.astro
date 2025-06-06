@@ -58,7 +58,7 @@ const currentYear = new Date().getFullYear();
       
       <!-- Bento Grid (Right Columns) -->
       <div class="md:col-span-2">
-        <div class="grid grid-cols-1 sm:grid-cols-6 auto-rows-[100px] gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-6 auto-rows-min gap-4">
           <!-- Resume - Large Card -->
           <a href={resumeUrl} target="_blank" rel="noopener noreferrer" 
              class="col-span-1 sm:col-span-3 row-span-2 p-6 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-700/10 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
@@ -271,7 +271,7 @@ const currentYear = new Date().getFullYear();
   
   /* Improved responsive grid */
   @media (max-width: 640px) {
-    .auto-rows-[100px] {
+    .grid {
       grid-auto-rows: minmax(100px, auto);
     }
     
