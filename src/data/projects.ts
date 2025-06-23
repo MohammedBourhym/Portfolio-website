@@ -17,7 +17,7 @@ const projects: Project[] = [
   title: "AWS Infrastructure as Code (IaC) Project",
   description: "A Terraform-based project that provisions AWS infrastructure and deploys a Dockerized Node.js application using GitHub Actions.",
   techs: ["Terraform", "AWS", "EC2", "Docker", "GitHub Actions", "Node.js", "VPC", "Security Groups"],
-  link: "https://github.com/MohammedBourhym/aws-iac-project" // Replace with actual link if available
+  link: "https://github.com/MohammedBourhym/aws_iac_project"  
 }
   ,
   {
@@ -42,37 +42,31 @@ const projects: Project[] = [
   title: "Digital Banking App",
   description: "A full-stack digital banking system using Spring Boot and Angular 19 with JWT security, role-based access, reactive state management, and a Tailwind-powered modern UI.",
   techs: ["Spring Boot", "Angular 19", "JWT", "Tailwind CSS", "RxJS", "MySQL", "Spring Security", "Hibernate", "Swagger", "TypeScript"],
-  link: "https://github.com/yourusername/Digital-Banking-App" // Replace with actual link
+  link: "https://github.com/yourusername/Digital_Banking_App" // Replace with actual link
 },
 {
   title: "Angular Productivity Application",
   description: "A full-stack employee productivity system with role-based access, calendar/event management, document handling, and metrics dashboards using Angular and Express.",
   techs: ["Angular", "TypeScript", "PrimeNG", "Express.js", "JWT", "Supabase", "Docker", "Multer", "Chart.js", "FullCalendar"],
-  link: "https://github.com/MohammedBourhym/Angular-Productivity-Application" // Replace with actual link
+  link: "https://github.com/MohammedBourhym/Angular_Productivity_Application" // Replace with actual link
 },
 {
   title: "Keeper App",
   description: "A Google Keep clone built with React and Express that supports note creation, labeling, pinning, archiving, and dark mode.",
   techs: ["React", "Express.js", "MongoDB", "Mongoose", "React Router", "Context API", "CSS"],
-  link: "https://github.com/MohammedBourhym/Keeper-App" // Replace with actual link
+  link: "https://github.com/MohammedBourhym/Keeper_App" // Replace with actual link
 },
 {
   title: "WinBackup Automation",
   description: "A bash-based backup and restore tool for Windows (especially WSL users), supporting directory compression, application export, restoration, and logging.",
   techs: ["Bash", "PowerShell", "Windows Subsystem for Linux", "Multi-threading", "winget"],
-  link: "https://github.com/MohammedBourhym/WinBackupAutomation" // Replace with actual link
+  link: "https://github.com/MohammedBourhym/WinBackupAutomation" 
 },
 {
   title: "Angular Productivity Application",
   description: "A full-stack employee productivity system with role-based access, calendar/event management, document handling, and metrics dashboards using Angular and Express.",
   techs: ["Angular", "TypeScript", "PrimeNG", "Express.js", "JWT", "Supabase", "Docker", "Multer", "Chart.js", "FullCalendar"],
-  link: "https://github.com/MohammedBourhym/Angular-Productivity-Application" // Replace with actual link
-},
-{
-  title: "Keeper App",
-  description: "A Google Keep clone built with React and Express that supports note creation, labeling, pinning, archiving, and dark mode.",
-  techs: ["React", "Express.js", "MongoDB", "Mongoose", "React Router", "Context API", "CSS"],
-  link: "https://github.com/MohammedBourhym/Keeper-App" // Replace with actual link
+  link: "https://github.com/MohammedBourhym/Angular_Productivity_Application" 
 }
 
 
