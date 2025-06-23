@@ -24,37 +24,7 @@ const projects: Project[] = [
     description: "A sleek dictionary application with multiple language support",
     techs: ["Next.js", "react-query", "zod"],
     link: "https://github.com/MoBourhym/dictionary-app",
-  },
-  {
-    title: "E-commerce Dashboard",
-    description: "Admin dashboard for managing products, orders, and customers",
-    techs: ["React", "Node.js", "MongoDB", "Express"],
-    link: "https://github.com/MoBourhym/ecommerce-dashboard",
-  },
-  {
-    title: "Weather Forecast App",
-    description: "Real-time weather forecasting with location detection",
-    techs: ["Vue.js", "OpenWeather API", "Leaflet"],
-    link: "https://github.com/MoBourhym/weather-app",
-  },
-  {
-    title: "Recipe Finder",
-    description: "Find recipes based on ingredients you have at home",
-    techs: ["React Native", "Firebase", "Spoonacular API"],
-    link: "https://github.com/MoBourhym/recipe-finder",
-  },
-  {
-    title: "Task Management System",
-    description: "Collaborative task management for teams with real-time updates",
-    techs: ["Angular", "Firebase", "RxJS"],
-    link: "https://github.com/MoBourhym/task-manager",
-  },
-  {
-    title: "Portfolio",
-    description: "My personal portfolio website built with Astro",
-    techs: ["Astro", "TypeScript", "TailwindCSS"],
-    link: "https://github.com/MoBourhym/portfolio",
-  },
+  }
 ];
 
 export default projects;

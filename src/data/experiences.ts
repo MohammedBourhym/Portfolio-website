@@ -13,8 +13,8 @@ const experiences: Experience[] = [
     {
       role: "Web Developer Intern",
       company: "Foliatech",
-      companyLink: "https://foliatech.com",
-      location: "Paris, France",
+      companyLink: "https://foliatech.fr",
+      location: "Tangier, Morocco",
       date: "Jul 2024 - Aug 2024",
       period: "1 mo",
       description:
