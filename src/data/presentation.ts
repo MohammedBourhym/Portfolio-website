@@ -26,7 +26,7 @@ const presentation: Presentation = {
   socials: [
     {
       label: "Github",
-      link: "https://github.com/MoBourhym", // Replace with your actual GitHub username
+      link: "https://github.com/MohammedBourhym", // Replace with your actual GitHub username
     },
     {
       label: "LinkedIn",

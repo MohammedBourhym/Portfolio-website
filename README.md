@@ -1,6 +1,6 @@
 # 👨‍🚀 Personal Portfolio
 
-![Portfolio Screenshot](/public/opengraph-image.jpg)
+![Portfolio Screenshot](/public/opengraph-image.png)
 
 My personal portfolio website built with Astro and TailwindCSS.
 NB: Additional color themes can also be configured on the `src/data/theme.ts` file.
