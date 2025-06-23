@@ -2,9 +2,10 @@ name = "portfolio-website"
 compatibility_date = "2023-06-23"
 
 [build]
-command = "npm install && npm run build"
+command = "./build.sh"
 [build.environment]
 NODE_VERSION = "20.10.0"
+NPM_FLAGS = "--legacy-peer-deps"
 
 [build.upload]
 format = "directory"
