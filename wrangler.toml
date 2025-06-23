@@ -3,6 +3,9 @@ compatibility_date = "2023-06-23"
 
 [build]
 command = "npm install && npm run build"
+[build.environment]
+NODE_VERSION = "20.10.0"
+
 [build.upload]
 format = "directory"
 dir = "dist"
