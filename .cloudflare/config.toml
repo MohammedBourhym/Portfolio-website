@@ -1,0 +1,4 @@
+node_version = "20"
+
+[build]
+command = "npm install && npm run build"

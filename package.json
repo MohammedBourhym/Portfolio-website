@@ -1,4 +1,3 @@
-
 {
   "name": "astro-template-portfolio",
   "type": "module",
@@ -30,6 +29,6 @@
     "prettier-plugin-tailwindcss": "0.3.0"
   },
   "engines": {
-    "node": ">=18.17.1"
+    "node": ">=20.10.0"
   }
 }
