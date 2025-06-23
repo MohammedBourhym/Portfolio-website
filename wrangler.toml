@@ -1,0 +1,8 @@
+name = "portfolio-website"
+compatibility_date = "2023-06-23"
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "directory"
+dir = "dist"
