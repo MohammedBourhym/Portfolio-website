@@ -8,11 +8,12 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Puppetfactory",
-    description: "A platform for creating and managing automated puppet shows with AI integration",
-    techs: ["Next.js", "TypeScript", "TailwindCSS", "AI"],
-    link: "",
-  },
+  title: "CommandBuddy cloud-native GitOps projec",
+  description: "A cloud-native GitOps project featuring an AI-powered terminal quiz app that helps developers memorize CLI commands interactively. Built with Spring Boot, MongoDB, React, and deployed on EKS using Terraform and GitHub Actions.",
+  techs: ["Ansible","AWS","Terraform", "GitHub Actions", "EKS", "Docker","Spring Boot", "React", "TailwindCSS","Groq API", "MongoDB"],
+  link: "https://github.com/MohammedBourhym/Cloud-native-gitops-project", 
+},
+
   {
   title: "AWS Infrastructure as Code (IaC) Project",
   description: "A Terraform-based project that provisions AWS infrastructure and deploys a Dockerized Node.js application using GitHub Actions.",
