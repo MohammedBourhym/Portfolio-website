@@ -5,111 +5,102 @@ export interface Language {
   }
   
   export const languages: Record<string, Language> = {
-    angular: {
-      name: "Angular",
-      iconName: "angular",
-    },
-    astro: {
-      name: "Astro",
-      iconName: "astro",
-    },
-    bootstrap: {
-      name: "Bootstrap",
-      iconName: "bootstrap",
-    },
-    cloudflare: {
-      name: "Cloudflare",
-      iconName: "cloudflare",
-    },
-    html: {
-      name: "HTML 5",
-      iconName: "html",
-    },
-    javascript: {
-      name: "JavaScript",
-      iconName: "javascript",
-    },
-    mongo: {
-      name: "MongoDb",
-      iconName: "mongo",
-    },
-    mysql: {
-      name: "MySQL",
-      className: "!bg-[#f6ece1]",
-      iconName: "mysql",
-    },
-    wordpress: {
-      name: "Wordpress",
-      iconName: "wordpress",
-    },
-    node: {
-      name: "Node.js",
-      iconName: "node",
-    },
-    tailwind: {
-      name: "Tailwind CSS",
-      iconName: "tailwind",
-    },
-    figma: {
-      name: "Figma",
-      iconName: "figma",
-    },
-    firebase: {
-      name: "Firebase",
-      iconName: "firebase",
-    },
-    markdown: {
-      name: "Markdown",
-      iconName: "markdown",
-    },
-    php: {
-      name: "PHP",
-      iconName: "php",
-    },
-    sass: {
-      name: "Sass",
-      iconName: "sass",
-    },
-    ts: {
-      name: "TypeScript",
-      iconName: "typescript",
-    },
-    git: {
-      name: "Git",
-      iconName: "git",
-    },
-    css: {
-      name: "CSS",
-      iconName: "css",
-    },
-    vercel: {
-      name: "Vercel",
-      iconName: "vercel",
-    },
-    netlify: {
-      name: "Netlify",
-      iconName: "netlify",
-    },
-    gatsby: {
-      name: "Gatsby",
-      iconName: "gatsby",
-    },
-    windsurf: {
-      name: "Windsurf",
-      iconName: "windsurf-logo",
-    },
-    cursor: {
-      name: "Cursor",
-      iconName: "cursor-ia",
-    },
-    deepseek: {
-      name: "DeepSeek",
-      iconName: "deepseek",
-    },
-    python: {
-      name: "Python",
-      iconName: "python",
-    },
+   html: {
+    name: "HTML 5",
+    iconName: "html",
+  },
+  css: {
+    name: "CSS",
+    iconName: "css",
+  },
+  javascript: {
+    name: "JavaScript",
+    iconName: "javascript",
+  },
+  tailwind: {
+    name: "Tailwind CSS",
+    iconName: "tailwind",
+  },
+  bootstrap: {
+    name: "Bootstrap",
+    iconName: "bootstrap",
+  },
+  ts: {
+    name: "TypeScript",
+    iconName: "typescript",
+  },
+  react: {
+    name: "React",
+    iconName: "react",
+  },
+  angular: {
+    name: "Angular",
+    iconName: "angular",
+  },
+  astro: {
+    name: "Astro",
+    iconName: "astro",
+  },
+  "spring boot": {
+    name: "Spring Boot",
+    iconName: "spring boot",
+  },
+  node: {
+    name: "Node.js",
+    iconName: "node",
+  },
+  "c++": {
+    name: "C++",
+    iconName: "c++",
+  },
+  java: {
+    name: "Java",
+    iconName: "java",
+  },
+  python: {
+    name: "Python",
+    iconName: "python",
+  },
+  mongo: {
+    name: "MongoDB",
+    iconName: "mongo",
+  },
+  mysql: {
+    name: "MySQL",
+    iconName: "mysql",
+  },
+  redis: {
+    name: "Redis",
+    iconName: "redis",
+  },
+  git: {
+    name: "Git",
+    iconName: "git",
+  },
+  docker: {
+    name: "Docker",
+    iconName: "docker",
+  },
+  terraform: {
+    name: "Terraform",
+    iconName: "terraform",
+  },
+  "github actions": {
+    name: "GitHub Actions",
+    iconName: "github actions",
+  },
+  vagrant: {
+    name: "Vagrant",
+    iconName: "vagrant",
+  },
+  ansible: {
+    name: "Ansible",
+    iconName: "ansible",
+  },
+  aws: {
+    name: "AWS",
+    iconName: "aws",
+  }
   };
   
   export const getLanguage = (lang: string): Language => {
