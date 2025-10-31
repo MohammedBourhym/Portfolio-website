@@ -20,7 +20,7 @@ const presentation: Presentation = {
   name:"Mohammed Bourhym",
   mail: "simobourhym01@gmail.com",
   title: "Mohammed Bourhym | Software Engineer & DevOps Enthusiast",
-  profile: "/images/me.jpeg",
+  profile: "/images/me.png",
   description:
     "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure. Available for internships and collaboration.",
   socials: [
