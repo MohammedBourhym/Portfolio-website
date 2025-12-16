@@ -18,7 +18,7 @@ const experiences: Experience[] = [{
   period: "2 mo",
   description:
     "During my internship at IT Access, I designed and developed a cloud-based, distributed maintenance ticket management system using a GitOps approach, automated CI/CD pipelines, and Infrastructure as Code (Terraform) to ensure scalability, reliability, and zero-downtime deployments.",
-  techStack: ["Angular","Tailwind","Spring Boot", "Github Actions","Docker","JWT", "CI/CD","Terraform","EKS"]
+  techStack: ["Angular","Tailwind","Spring Boot", "Github Actions","Docker","JWT", "CI/CD","Terraform","EKS","AWS"]
 },
 {
   role: "Web Developer Intern",
