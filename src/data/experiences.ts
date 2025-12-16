@@ -23,7 +23,7 @@ const experiences: Experience[] = [{
   techStack: ["Angular", "Tailwind", "Spring Boot", "Github Actions", "Docker", "JWT", "CI/CD", "Terraform", "EKS", "AWS"]
 },
 {
-  role: "Web Developer Intern",
+  role: "Full-stack Developer",
   company: "Foliatech",
   companyLink: "https://foliatech.fr",
   location: "Tangier, Morocco",
