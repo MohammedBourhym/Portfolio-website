@@ -22,7 +22,7 @@ const presentation: Presentation = {
   title: "Mohammed Bourhym | Software Engineer",
   profile: "/images/me.png",
   description:
-    "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure. Available for collaboration.",
+    "Software engineering student skilled in web development and cloud. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure. Available for collaboration.",
   socials: [
     {
       label: "Github",
