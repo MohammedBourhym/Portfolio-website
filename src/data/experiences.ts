@@ -6,6 +6,7 @@ export interface Experience {
   date: string;
   period: string;
   description: string;
+  link: string;
   techStack: string[];
 }
 
@@ -18,7 +19,8 @@ const experiences: Experience[] = [{
   period: "2 mo",
   description:
     "During my internship at IT Access, I designed and developed a cloud-based, distributed maintenance ticket management system using a GitOps approach, automated CI/CD pipelines, and Infrastructure as Code (Terraform) to ensure scalability, reliability, and zero-downtime deployments.",
-  techStack: ["Angular","Tailwind","Spring Boot", "Github Actions","Docker","JWT", "CI/CD","Terraform","EKS","AWS"]
+  link: "https://github.com/MohammedBourhym/it-support-ticketing",
+  techStack: ["Angular", "Tailwind", "Spring Boot", "Github Actions", "Docker", "JWT", "CI/CD", "Terraform", "EKS", "AWS"]
 },
 {
   role: "Web Developer Intern",
@@ -29,6 +31,7 @@ const experiences: Experience[] = [{
   period: "1 mo",
   description:
     "Developed a full-stack Angular application for business administrators to manage employee data, track work activities, and enhance productivity. Implemented features including employee profile management, activity monitoring, and role-based access control. Built a secure backend with Node.js and Supabase, utilizing JWT authentication and protected API routes, integrated with the Angular frontend via RESTful APIs.",
+  link: "https://github.com/MohammedBourhym/Employee-Management",
   techStack: ["Angular", "Node.js", "Supabase", "JWT", "RESTful APIs"]
 }
 ];

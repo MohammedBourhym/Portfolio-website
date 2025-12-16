@@ -2,9 +2,9 @@
 // components/ExperienceCard.astro
 import type { Experience } from "@/data/experiences"
 
-const { role, company, location, date, period, description, companyLink, techStack } = Astro.props
+const { role, company, location, date, period, description, link,companyLink, techStack } = Astro.props
 ---
-<a href="https://example.com" class="clickable-div-wrapper">
+<a href={link} target="_blank">
 <article  class="flex flex-col gap-3 p-6 border border-neutral-800 rounded-xl  dark:bg-neutral-950  transition-all duration-300 hover:-translate-y-2 hover:border-orange-600 hover:shadow-lg">
   <div class="flex flex-col md:flex-row justify-between items-start gap-2 ">
     <h3 class="text-lg font-semibold text-gray-900 dark:text-neutral-100">{role}</h3>
