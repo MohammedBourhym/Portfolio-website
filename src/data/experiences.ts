@@ -11,6 +11,30 @@ export interface Experience {
 }
 
 const experiences: Experience[] = [{
+  role: "AI Software Engineer - PFE Internship",
+  company: "Theodo",
+  companyLink: "https://www.theodo.fr",
+  location: "Casablanca, Morocco",
+  date: "Feb 2026 - Aug 2026",
+  period: "6 mo",
+  description:
+    "Developed an AI-powered compliance agent that automatically audits mobile applications against Apple App Store and Google Play policies. Built a deterministic evaluation framework with promptfoo to validate LLM outputs, automated quality gates through a custom GitHub Action integrated into CI/CD, and leveraged Python automation to keep compliance guidelines extensible and up to date.",
+  link: "https://github.com/MohammedBourhym",
+  techStack: ["Python", "LLM", "Promptfoo", "GitHub Actions", "CI/CD", "TypeScript", "Automation"]
+},
+{
+  role: "Full-stack Software Engineer - PFE Internship",
+  company: "Theodo",
+  companyLink: "https://www.theodo.fr",
+  location: "Casablanca, Morocco",
+  date: "Feb 2026 - Aug 2026",
+  period: "6 mo",
+  description:
+    "Contributed to a Next.js/React e-commerce application and its Spring Boot backend. Implemented the authentication system with persistent sessions, JWT token refresh, Zod runtime validation, and Jest/RTL test coverage. Delivered backend features following Hexagonal Architecture and Domain-Driven Design, with Liquibase database migrations, Docker Compose local environments, and JUnit/Testcontainers integration tests, enforced by strict quality gates (ArchUnit, JaCoCo, PIT mutation testing).",
+  link: "https://github.com/MohammedBourhym",
+  techStack: ["Next.js", "React", "TypeScript", "Spring Boot", "Hexagonal Architecture", "DDD", "Liquibase", "Docker Compose", "Zod", "JWT", "Jest", "JUnit", "Testcontainers", "ArchUnit"]
+},
+{
   role: "Cloud Software Engineer",
   company: " IT Access",
   companyLink: "https://www.itaccess.ma/",
