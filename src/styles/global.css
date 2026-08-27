@@ -254,15 +254,27 @@ body {
 }
 
 .post blockquote {
-  @apply flex flex-row gap-2 text-gray-800 dark:text-neutral-200 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-orange-500 dark:before:bg-orange-400 before:content-[''];
+  @apply border-l-4 border-orange-500 dark:border-orange-400 pl-4 py-1 my-4 text-gray-800 dark:text-neutral-200;
 }
 
 .post pre {
-  @apply p-4 bg-gray-100 dark:bg-neutral-900 rounded-md;
+  @apply p-4 bg-gray-100 dark:bg-neutral-900 rounded-md overflow-x-auto;
 }
 
 .post pre > code {
   @apply bg-transparent text-gray-900 dark:text-neutral-100;
+}
+
+.post table {
+  @apply w-full my-4 border-collapse text-sm;
+}
+
+.post th {
+  @apply border border-gray-300 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800 px-3 py-2 text-left font-semibold text-gray-900 dark:text-neutral-100;
+}
+
+.post td {
+  @apply border border-gray-300 dark:border-neutral-700 px-3 py-2 align-top text-gray-700 dark:text-neutral-300;
 }
 
 .post strong {
