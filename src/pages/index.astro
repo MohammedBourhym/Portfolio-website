@@ -34,7 +34,7 @@ const posts = (await getCollection("posts"))
   );
 ---
 
-<Layout title="Mohammed Bourhym | Software Engineer " description="Mohammed Bourhym - Software engineering student from Morocco specializing in DevOps, web development, and modern technologies. Explore my portfolio, projects, and professional experience. Available for internships and collaboration.">
+<Layout title="Mohammed Bourhym | Software Engineer " description="Mohammed Bourhym - Software engineer specializing in Web development, and modern technologies. Explore my portfolio, projects, and professional experience. Available for collaboration.">
   <main class="flex flex-col gap-20">
    <article
   class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-6 border border-gray-200 dark:border-neutral-800 rounded-xl bg-gray-50 dark:bg-neutral-950 shadow-lg transition-colors duration-300"
@@ -65,7 +65,7 @@ const posts = (await getCollection("posts"))
 
     <h2
       class="max-w-prose leading-6 text-gray-600 dark:text-neutral-400"
-      set:html={convertAsteriskToStrongTag("Hi, I'm *Mohammed Bourhym* (also known as *Bourhym*), a passionate software engineering student from Morocco specializing in DevOps and web development. I create modern web applications and build efficient cloud infrastructure solutions.")}
+      set:html={convertAsteriskToStrongTag("Hi, I'm *Mohammed Bourhym*, a passionate software engineer specializing in web development. I create modern web applications applying modern software architecture, cloud technologies, and AI to deliver high-quality software.")}
     />
   <div class="flex items-center gap-2" role="list" aria-label="Social media links">
       <Social link={email} iconName="envelope" />
