@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
 import BlurCircle from "@/components/shared/BlurCircle.astro";
 import theme from "@/data/theme";
+import { SITE_URL } from "@/data/config";
 
 import "@/styles/global.css";
 import "@/styles/print.css";
@@ -16,6 +17,48 @@ const {
   title = "Mohammed Bourhym | Software Engineer & DevOps Enthusiast", 
   description = "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure. Available for internships and collaboration." 
 } = Astro.props;
+
+const ogImage = `${SITE_URL}/opengraph-image.png`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammed Bourhym",
+  "alternateName": ["Bourhym", "Mohammed", "Mo Bourhym"],
+  "jobTitle": "Software Engineer",
+  "description": "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure.",
+  "url": SITE_URL,
+  "image": ogImage,
+  "sameAs": [
+    "https://github.com/MohammedBourhym",
+    "https://www.linkedin.com/in/mohammed-bourhym-733b91274/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Morocco"
+  },
+  "email": "simobourhym01@gmail.com",
+  "knowsAbout": [
+    "Software Engineering",
+    "DevOps",
+    "Web Development",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Astro",
+    "Tailwind CSS",
+    "Cloud Computing",
+    "Docker",
+    "Kubernetes",
+    "CI/CD"
+  ],
+  "alumniOf": {
+    "@type": "Organization",
+    "name": "GEIW"
+  }
+};
 ---
 
 <!DOCTYPE html>
@@ -37,71 +80,32 @@ const {
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bourhym.me" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://bourhym.me/images/me.jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1552" />
+    <meta property="og:image:height" content="902" />
     <meta property="og:image:alt" content="Mohammed Bourhym - Software Engineer & DevOps Enthusiast" />
     <meta property="og:site_name" content="Mohammed Bourhym Portfolio" />
     <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://bourhym.me" />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://bourhym.me/images/me.jpeg" />
+    <meta property="twitter:image" content={ogImage} />
     <meta property="twitter:image:alt" content="Mohammed Bourhym - Software Engineer Portfolio" />
     <meta property="twitter:creator" content="@bourhym" />
     <meta property="twitter:site" content="@bourhym" />
     
     <!-- Additional SEO -->
-    <link rel="canonical" href="https://bourhym.me" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="theme-color" content="#f97316" />
     
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Mohammed Bourhym",
-        "alternateName": ["Bourhym", "Mohammed", "Mo Bourhym"],
-        "jobTitle": "Software Engineer",
-        "description": "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure.",
-        "url": "https://bourhym.me",
-        "image": "https://bourhym.me/images/me.jpeg",
-        "sameAs": [
-          "https://github.com/MoBourhym",
-          "https://www.linkedin.com/in/mohammed-bourhym-733b91274/"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "Morocco"
-        },
-        "email": "simobourhym01@gmail.com",
-        "knowsAbout": [
-          "Software Engineering",
-          "DevOps",
-          "Web Development",
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Node.js",
-          "Astro",
-          "Tailwind CSS",
-          "Cloud Computing",
-          "Docker",
-          "Kubernetes",
-          "CI/CD"
-        ],
-        "alumniOf": {
-          "@type": "Organization",
-          "name": "GEIW"
-        }
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
     
     <title>{title}</title>
   </head>

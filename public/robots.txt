@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bourhym.me/sitemap.xml
+Sitemap: https://bourhym.pages.dev/sitemap.xml

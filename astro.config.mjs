@@ -6,12 +6,12 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://bourhym.me",
+  site: "https://bourhym.pages.dev",
   integrations: [
     icon(),
     tailwind(),
     robotsTxt({
-      sitemap: ["https://bourhym.me/sitemap.xml"],
+      sitemap: ["https://bourhym.pages.dev/sitemap.xml"],
     }),
   ],
   markdown: {

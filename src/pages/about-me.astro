@@ -10,11 +10,55 @@ import Social from "@/components/common/Social.astro";
 const email = "simobourhym01@gmail.com";
 const github = "https://github.com/MohammedBourhym";
 const linkedin = "https://www.linkedin.com/in/mohammed-bourhym-733b91274/";
+
+import { SITE_URL } from "@/data/config";
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Mohammed Bourhym",
+    "alternateName": ["Bourhym", "Mohammed", "Mo Bourhym"],
+    "jobTitle": "Software Engineer",
+    "description": "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure.",
+    "url": SITE_URL,
+    "image": `${SITE_URL}/opengraph-image.png`,
+    "sameAs": [
+      "https://github.com/MohammedBourhym",
+      "https://www.linkedin.com/in/mohammed-bourhym-733b91274/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Morocco"
+    },
+    "email": "simobourhym01@gmail.com",
+    "knowsAbout": [
+      "Software Engineering",
+      "DevOps",
+      "Web Development",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Astro",
+      "Tailwind CSS",
+      "Cloud Computing",
+      "Docker",
+      "Kubernetes",
+      "CI/CD"
+    ],
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "GEIW"
+    }
+  }
+};
 ---
 
 <Layout 
   title="About Mohammed Bourhym | Software Engineer & DevOps Specialist" 
-  description="Learn more about Mohammed Bourhym, a passionate software engineering student from Morocco specializing in DevOps, web development, and modern cloud technologies. Discover my journey, skills, and professional background."
+  description="Learn more about Mohammed Bourhym, a passionate software engineer specializing in DevOps, web development, and modern cloud technologies. Discover my journey, skills, and professional background."
 >
   <main class="flex flex-col gap-20">
     <!-- Hero Section -->
@@ -36,7 +80,7 @@ const linkedin = "https://www.linkedin.com/in/mohammed-bourhym-733b91274/";
           <div>
             <h2 class="text-2xl font-semibold text-gray-900 dark:text-neutral-100 mb-3">Software Engineer</h2>
             <p class="text-gray-700 dark:text-neutral-300 leading-relaxed">
-              Hello! I'm Mohammed Bourhym, a passionate software engineering student from Morocco with a strong focus on DevOps practices and modern web development. Currently pursuing my studies at GEIW (Groupe d'Écoles d'Ingénieurs du Web), I'm dedicated to bridging the gap between development and operations through innovative solutions and cutting-edge technologies.
+              Hello! I'm Mohammed Bourhym, a passionate software engineer with a strong focus on DevOps practices and modern web development. I'm dedicated to bridging the gap between development and operations through innovative solutions and cutting-edge technologies.
             </p>
           </div>
           
@@ -142,46 +186,4 @@ const linkedin = "https://www.linkedin.com/in/mohammed-bourhym-733b91274/";
   </main>
 </Layout>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Mohammed Bourhym",
-    "alternateName": ["Bourhym", "Mohammed", "Mo Bourhym"],
-    "jobTitle": "Software Engineer",
-    "description": "Software engineering student passionate about DevOps and web development. Mohammed Bourhym specializes in modern web technologies and cloud infrastructure.",
-    "url": "https://bourhym.me",
-    "image": "https://bourhym.me/images/me.jpeg",
-    "sameAs": [
-      "https://github.com/MoBourhym",
-      "https://www.linkedin.com/in/mohammed-bourhym-733b91274/"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "Morocco"
-    },
-    "email": "simobourhym01@gmail.com",
-    "knowsAbout": [
-      "Software Engineering",
-      "DevOps",
-      "Web Development", 
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Node.js",
-      "Astro",
-      "Tailwind CSS",
-      "Cloud Computing",
-      "Docker",
-      "Kubernetes",
-      "CI/CD"
-    ],
-    "alumniOf": {
-      "@type": "Organization",
-      "name": "GEIW"
-    }
-  }
-}
-</script>
+<script type="application/ld+json" set:html={JSON.stringify(aboutSchema)} />
